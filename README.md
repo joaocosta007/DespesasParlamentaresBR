@@ -70,3 +70,64 @@ https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb
 
 ### COMO CONTRIBUIR
 Interessado em ajudar a tornar este projeto ainda mais robusto? Sinta-se à vontade para abrir uma issue ou um pull request. Leia o nosso manual de contribuição para saber mais sobre como começar.
+
+### **Dicionário de Dados**
+
+Este dicionário descreve as tabelas, colunas, tipos de dados e a finalidade de cada elemento no banco de dados analítico do projeto.
+
+---
+
+**FatoGastoParlamentar**
+- **GastoID:** `INT` - Chave primária. Identificador único de cada despesa.
+- **DeputadoID:** `INT` - Chave estrangeira para a tabela `DimDeputado`.
+- **FornecedorID:** `INT` - Chave estrangeira para a tabela `DimFornecedor`.
+- **DataID:** `INT` - Chave estrangeira para a tabela `DimTempo`.
+- **ValorGasto:** `DECIMAL(18,2)` - Valor total da despesa.
+- **TipoDespesa:** `VARCHAR(100)` - Categoria da despesa (ex.: "DIVULGACAO DA ATIVIDADE PARLAMENTAR").
+- **NumeroDocumento:** `VARCHAR(50)` - Número do documento fiscal da despesa.
+
+---
+
+**FatoVotacaoPresenca**
+- **VotacaoPresencaID:** `INT` - Chave primária. Identificador único de cada registro de voto/presença.
+- **DeputadoID:** `INT` - Chave estrangeira para a tabela `DimDeputado`.
+- **DataID:** `INT` - Chave estrangeira para a tabela `DimTempo`.
+- **Voto:** `VARCHAR(50)` - Voto do deputado (ex.: "Sim", "Não", "Abstenção").
+- **Presenca:** `VARCHAR(50)` - Status de presença do deputado (ex.: "Presente", "Ausente").
+
+---
+
+**DimDeputado**
+- **DeputadoID:** `INT` - Chave primária. Identificador único do deputado.
+- **NomeDeputado:** `VARCHAR(255)` - Nome completo do deputado.
+- **UF:** `VARCHAR(2)` - Unidade Federativa do deputado (ex.: "SP", "RJ").
+- **URLFoto:** `VARCHAR(255)` - Link para a foto do deputado.
+
+---
+
+**DimFornecedor**
+- **FornecedorID:** `INT` - Chave primária. Identificador único do fornecedor.
+- **NomeFornecedor:** `VARCHAR(255)` - Nome ou razão social do fornecedor.
+- **CNPJ:** `VARCHAR(20)` - CNPJ do fornecedor.
+- **SetorCNAE:** `VARCHAR(255)` - Setor econômico do fornecedor.
+
+---
+
+**DimTempo**
+- **DataID:** `INT` - Chave primária. Formato `YYYYMMDD`.
+- **DataCompleta:** `DATE` - Data completa.
+- **Ano:** `INT` - Ano da despesa.
+- **Mes:** `INT` - Mês da despesa.
+- **NomeMes:** `VARCHAR(20)` - Nome do mês.
+- **Trimestre:** `INT` - Trimestre do ano.
+- **Semestre:** `INT` - Semestre do ano.
+
+---
+
+**BridgeDeputadoLegislaturaPartido**
+- **BridgeID:** `INT` - Chave primária. Identificador único da relação.
+- **DeputadoID:** `INT` - Chave estrangeira para a tabela `DimDeputado`.
+- **PartidoID:** `INT` - Chave estrangeira para a tabela de dimensão de partidos (a ser criada).
+- **DataInicio:** `DATE` - Data de início da afiliação do deputado ao partido.
+- **DataFim:** `DATE` - Data de término da afiliação.
+
