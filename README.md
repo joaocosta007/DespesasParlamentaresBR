@@ -3,6 +3,8 @@
 ### Visão geral
 Este projeto acadêmico simula um pipeline de dados completo, do levantamento de requisitos à entrega de insights, utilizando exclusivamente T-SQL. O objetivo é demonstrar proficiência em engenharia de dados, cobrindo modelagem dimensional, processos de ETL, otimização de consultas e implementação de segurança. O tema escolhido, a análise dos gastos parlamentares no Brasil, oferece um cenário real e desafiador.
 
+---
+
 ### O PROBLEMA DE NEGÓCIO
 O projeto se concentra no impacto econômico da Cota para o Exercício da Atividade Parlamentar (CEAP). Embora a transparência seja essencial, a análise dos dados brutos é complexa. O desafio aqui é transformar dados fragmentados de diversas fontes públicas em um modelo de banco de dados analítico, capaz de responder a perguntas estratégicas e revelar padrões de gastos, concentração de mercado e correlações de comportamento.
 
@@ -16,6 +18,8 @@ As seguintes perguntas guiaram a modelagem e a análise dos dados:
 - Deputados mais gastadores em publicidade têm comportamento diferente em votações/presenças?
 - Empresas fornecedoras atuam em vários estados ou se concentram em regiões específicas?
 
+---
+
 ### ARQUITETURA E COLETA DE DADOS
 Este projeto utiliza um conjunto de dados robusto, com mais de 200.000 registros. A solução foi arquitetada em um esquema em estrela (star schema) para otimizar as consultas analíticas.
 
@@ -24,6 +28,8 @@ A coleta de dados foi um processo manual e cuidadoso, garantindo a integração 
 - **Cota Parlamentar - Brasil.io:** A fonte principal de dados sobre despesas parlamentares. Os dados foram baixados como um arquivo CSV, contendo informações detalhadas sobre cada despesa, como valor, tipo de gasto e o fornecedor.
 - **Câmara dos Deputados - Dados Abertos:** Para obter informações sobre os deputados, como o nome completo, o partido e o estado, utilizamos a API de Dados Abertos da Câmara. O processo envolveu consultar a API para cada legislatura e extrair os dados relevantes, que foram salvos em formato JSON e, em seguida, transformados em um formato tabular para o carregamento no banco de dados.
 - **Receita Federal - CNPJs:** Para a análise setorial, a classificação dos fornecedores por setor econômico (CNAE) foi crucial. As informações de CNPJ foram cruzadas com um conjunto de dados públicos da Receita Federal, obtido em formato CSV de uma fonte externa, que relaciona CNPJs a seus respectivos CNAEs.
+
+---
 
 ### MODELAGEM DE DADOS
 O modelo de dados lógico foi traduzido para um modelo físico, otimizado para um ambiente de data warehouse (OLAP).
@@ -70,6 +76,8 @@ https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb
 
 ### COMO CONTRIBUIR
 Interessado em ajudar a tornar este projeto ainda mais robusto? Sinta-se à vontade para abrir uma issue ou um pull request. Leia o nosso manual de contribuição para saber mais sobre como começar.
+
+---
 
 ### **Dicionário de Dados**
 
