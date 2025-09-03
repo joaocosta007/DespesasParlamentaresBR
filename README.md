@@ -1,12 +1,12 @@
-Projeto: Engenharia e Análise de Dados com T-SQL 
+Projeto: Engenharia e Análise de Dados com T-SQL
 
     Visão geral: Este projeto acadêmico simula um pipeline de dados completo, do levantamento de requisitos à entrega de insights, utilizando exclusivamente T-SQL. O objetivo é demonstrar proficiência em engenharia de dados, cobrindo modelagem dimensional, processos de ETL, otimização de consultas e implementação de segurança. O tema escolhido, a análise dos gastos parlamentares no Brasil, oferece um cenário real e desafiador.
 
-O Problema de Negócio 
+O PROBLEMA DE NEGÓCIO
 
 O projeto se concentra no impacto econômico da Cota para o Exercício da Atividade Parlamentar (CEAP). Embora a transparência seja essencial, a análise dos dados brutos é complexa. O desafio aqui é transformar dados fragmentados de diversas fontes públicas em um modelo de banco de dados analítico, capaz de responder a perguntas estratégicas e revelar padrões de gastos, concentração de mercado e correlações de comportamento.
 
-Perguntas de Negócio 
+PERGUNTAS DE NEGÓCIO
 
 As seguintes perguntas guiaram a modelagem e a análise dos dados:
 
@@ -24,7 +24,7 @@ As seguintes perguntas guiaram a modelagem e a análise dos dados:
 
     Empresas fornecedoras atuam em vários estados ou se concentram em regiões específicas?
 
-Arquitetura e Coleta de Dados 
+ARQUITETURA E COLETA DE DADOS
 
 Este projeto utiliza um conjunto de dados robusto, com mais de 200.000 registros. A solução foi arquitetada em um esquema em estrela (star schema) para otimizar as consultas analíticas.
 
@@ -38,7 +38,7 @@ A coleta de dados foi um processo manual e cuidadoso, garantindo a integração 
 
     Receita Federal - CNPJs: Para a análise setorial, a classificação dos fornecedores por setor econômico (CNAE) foi crucial. As informações de CNPJ foram cruzadas com um conjunto de dados públicos da Receita Federal, obtido em formato CSV de uma fonte externa, que relaciona CNPJs a seus respectivos CNAEs.
 
-Modelagem de Dados 
+MODELAGEM DE DADOS
 
 O modelo de dados lógico foi traduzido para um modelo físico, otimizado para um ambiente de data warehouse (OLAP).
 
@@ -48,7 +48,7 @@ O modelo de dados lógico foi traduzido para um modelo físico, otimizado para u
 
     Dimensões Conformadas: As dimensões DimDeputado e DimTempo são compartilhadas entre as duas tabelas de fato, permitindo a análise de correlação entre os gastos e o comportamento de votação e presença dos deputados.
 
-Requisitos Técnicos e Implementação 
+REQUISITOS TÉCNICOS E IMPLEMENTAÇÃO
 
 Todo o projeto foi desenvolvido estritamente em T-SQL, seguindo os requisitos acadêmicos.
 
@@ -70,6 +70,6 @@ Todo o projeto foi desenvolvido estritamente em T-SQL, seguindo os requisitos ac
 
     Versionamento: Todo o código SQL e a documentação serão versionados no GitHub, com o acompanhamento de tarefas via quadro Trello.
 
-Como Contribuir 
+COMO CONTRIBUIR
 
 Interessado em ajudar a tornar este projeto ainda mais robusto? Sinta-se à vontade para abrir uma issue ou um pull request. Leia o nosso manual de contribuição para saber mais sobre como começar.
