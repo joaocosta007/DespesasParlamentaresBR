@@ -52,8 +52,7 @@ Todo o projeto foi desenvolvido estritamente em T-SQL, seguindo os requisitos ac
 ---
 
 ### Roadmap do Projeto
-Este é um resumo do nosso planejamento, detalhando as fases do projeto para acompanhamento do progresso:
-https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb67ed4329cEB4CE16C/constraint 
+Este é um resumo do nosso planejamento, detalhando as fases do projeto para acompanhamento do progresso: [**Constraint**](https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb67ed4329cEB4CE16C/constraint) 
 
 1.  **Fase 1: Modelagem Dimensional (Concluída)**
     - Definição das perguntas de negócio.
