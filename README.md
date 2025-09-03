@@ -25,9 +25,9 @@ Este projeto utiliza um conjunto de dados robusto, com mais de 200.000 registros
 
 #### Fontes e Processo de Coleta
 A coleta de dados foi um processo manual e cuidadoso, garantindo a integração de informações de diferentes origens para uma análise completa. As principais fontes e como os dados foram obtidos são detalhados abaixo:
-- **Cota Parlamentar - Brasil.io:** A fonte principal de dados sobre despesas parlamentares. Os dados foram baixados como um arquivo CSV, contendo informações detalhadas sobre cada despesa, como valor, tipo de gasto e o fornecedor.
-- **Câmara dos Deputados - Dados Abertos:** Para obter informações sobre os deputados, como o nome completo, o partido e o estado, utilizamos a API de Dados Abertos da Câmara. O processo envolveu consultar a API para cada legislatura e extrair os dados relevantes, que foram salvos em formato JSON e, em seguida, transformados em um formato tabular para o carregamento no banco de dados.
-- **Receita Federal - CNPJs:** Para a análise setorial, a classificação dos fornecedores por setor econômico (CNAE) foi crucial. As informações de CNPJ foram cruzadas com um conjunto de dados públicos da Receita Federal, obtido em formato CSV de uma fonte externa, que relaciona CNPJs a seus respectivos CNAEs.
+- [**Cota Parlamentar - Brasil.io:**](https://brasil.io/dataset/gastos-deputados/cota-parlamentar/) A fonte principal de dados sobre despesas parlamentares. Os dados foram baixados como um arquivo CSV, contendo informações detalhadas sobre cada despesa, como valor, tipo de gasto e o fornecedor.
+- [**Câmara dos Deputados - Dados Abertos:**](https://dadosabertos.camara.leg.br/api/v2/) Para obter informações sobre os deputados, como o nome completo, o partido e o estado, utilizamos a API de Dados Abertos da Câmara. O processo envolveu consultar a API para cada legislatura e extrair os dados relevantes, que foram salvos em formato JSON e, em seguida, transformados em um formato tabular para o carregamento no banco de dados.
+- [**Receita Federal - CNPJs:**](https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj) Para a análise setorial, a classificação dos fornecedores por setor econômico (CNAE) foi crucial. As informações de CNPJ foram cruzadas com um conjunto de dados públicos da Receita Federal, obtido em formato CSV de uma fonte externa, que relaciona CNPJs a seus respectivos CNAEs.
 
 ---
 
@@ -52,8 +52,7 @@ Todo o projeto foi desenvolvido estritamente em T-SQL, seguindo os requisitos ac
 ---
 
 ### Roadmap do Projeto
-Este é um resumo do nosso planejamento, detalhando as fases do projeto para acompanhamento do progresso:
-https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb67ed4329cEB4CE16C/constraint 
+Este é um resumo do nosso planejamento, detalhando as fases do projeto para acompanhamento do progresso: [**Constraint**](https://trello.com/invite/b/68a77556870866ca5480bb13/ATTI39e00b260e3e3ee2a0d8ecb67ed4329cEB4CE16C/constraint) 
 
 1.  **Fase 1: Modelagem Dimensional (Concluída)**
     - Definição das perguntas de negócio.
