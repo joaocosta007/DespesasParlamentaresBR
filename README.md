@@ -2,7 +2,7 @@ Projeto: Engenharia e Análise de Dados com T-SQL
 
     Visão geral: Este projeto acadêmico simula um pipeline de dados completo, do levantamento de requisitos à entrega de insights, utilizando exclusivamente T-SQL. O objetivo é demonstrar proficiência em engenharia de dados, cobrindo modelagem dimensional, processos de ETL, otimização de consultas e implementação de segurança. O tema escolhido, a análise dos gastos parlamentares no Brasil, oferece um cenário real e desafiador.
 
-O Problema de Negócio 🕵️‍♂
+O Problema de Negócio 
 
 O projeto se concentra no impacto econômico da Cota para o Exercício da Atividade Parlamentar (CEAP). Embora a transparência seja essencial, a análise dos dados brutos é complexa. O desafio aqui é transformar dados fragmentados de diversas fontes públicas em um modelo de banco de dados analítico, capaz de responder a perguntas estratégicas e revelar padrões de gastos, concentração de mercado e correlações de comportamento.
 
