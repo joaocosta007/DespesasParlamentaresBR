@@ -6,7 +6,7 @@ CREATE TABLE FatoGastoParlamentar (
 	id_data INT NOT NULL,
 	valor_gasto DECIMAL(18,2) NOT NULL,
 	tipo_despesa VARCHAR(100) NOT NULL,
-	numero_documento VARCHAR(50) NOTNULL,
+	numero_documento VARCHAR(50) NOT NULL,
 
 	FOREIGN KEY (id_deputado) REFERENCES DimDeputados(id_deputado),
 	FOREIGN KEY (id_fornecedor) REFERENCES DimFornecedor(id_fornecedor),
@@ -106,4 +106,5 @@ CREATE TABLE DimLegislatura (
 	id_legislatura INT PRIMARY KEY,
 	ano_incio INT NOT NULL,
 	ano_fim INT NOT NULL,
+
 )
