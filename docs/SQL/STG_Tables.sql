@@ -1,0 +1,97 @@
+create database Analise_Gastos
+
+use Analise_Gastos
+
+CREATE TABLE stg_CotaParlamentar (
+    codLegislatura              VARCHAR(50),
+    ideDocumento                VARCHAR(50),
+    ideCadastro                 VARCHAR(50),     
+    indTipoDocumento            VARCHAR(50),
+    nuCarteiraParlamentar       VARCHAR(50),
+    nuDeputadoId                VARCHAR(50),
+    nuLegislatura               VARCHAR(50),
+    numAno                      VARCHAR(50),
+    numEspecificacaoSubcota     VARCHAR(50),
+    numLote                     VARCHAR(50),
+    numMes                      VARCHAR(50),
+    numParcela                  VARCHAR(50),
+    numRessarcimento            VARCHAR(50),
+    numSubCota                  VARCHAR(50),
+    sgPartido                   VARCHAR(10),
+    sgUF                        CHAR(2),          
+    txtCNPJCPF                  VARCHAR(20),      
+    datEmissao                  VARCHAR(50),
+    datPagamentoRestituicao     VARCHAR(50),
+    vlrDocumento                VARCHAR(50),
+    vlrGlosa                    VARCHAR(50),
+    vlrLiquido                  VARCHAR(50),      
+    vlrRestituicao              VARCHAR(50),
+    txNomeParlamentar           VARCHAR(255),
+    txtDescricao                VARCHAR(255),
+    txtDescricaoEspecificacao   VARCHAR(255),
+    txtFornecedor               VARCHAR(255),
+    txtNumero                   VARCHAR(50),
+    txtPassageiro               VARCHAR(255),
+    txtTrecho                   VARCHAR(MAX),     
+    urlDocumento                VARCHAR(MAX),     
+    stg_id                      BIGINT IDENTITY(1,1) PRIMARY KEY
+);
+CREATE TABLE stg_CNPJ_Empresas (
+    CNPJ_BASICO                 VARCHAR(8) NOT NULL, 
+    RAZAO_SOCIAL_NOME_EMPRESARIAL VARCHAR(255),
+    NATUREZA_JURIDICA           VARCHAR(50),
+    QUALIFICACAO_DO_RESPONSAVEL VARCHAR(50),
+    CAPITAL_SOCIAL_DA_EMPRESA   VARCHAR(50),
+    PORTE_DA_EMPRESA            VARCHAR(2),  
+    ENTE_FEDERATIVO_RESPONSAVEL VARCHAR(255),
+    stg_id                      BIGINT IDENTITY(1,1)
+);
+
+CREATE TABLE stg_CNPJ_Estabelecimentos (
+    CNPJ_BASICO                 VARCHAR(8),
+    CNPJ_ORDEM                  VARCHAR(4),
+    CNPJ_DV                     VARCHAR(2),
+    IDENTIFICADOR_MATRIZ_FILIAL CHAR(1),  
+    NOME_FANTASIA               VARCHAR(255),
+    SITUACAO_CADASTRAL          VARCHAR(2), 
+    DATA_SITUACAO_CADASTRAL     VARCHAR(50), 
+    MOTIVO_SITUACAO_CADASTRAL   VARCHAR(50),
+    NOME_CIDADE_EXTERIOR        VARCHAR(255),
+    PAIS                        VARCHAR(50), 
+    DATA_DE_INICIO_ATIVIDADE    VARCHAR(50), 
+    CNAE_FISCAL_PRINCIPAL       VARCHAR(7),  
+    CNAE_FISCAL_SECUNDARIA      VARCHAR(MAX), 
+    TIPO_DE_LOGRADOURO          VARCHAR(100),
+    LOGRADOURO                  VARCHAR(255),
+    NUMERO                      VARCHAR(50), 
+    COMPLEMENTO                 VARCHAR(255),
+    BAIRRO                      VARCHAR(255),
+    CEP                         VARCHAR(50),
+    UF                          CHAR(2),     
+    MUNICIPIO                   VARCHAR(50), 
+    DDD_1                       VARCHAR(10),
+    TELEFONE_1                  VARCHAR(50),
+    DDD_2                       VARCHAR(10),
+    TELEFONE_2                  VARCHAR(50),
+    DDD_DO_FAX                  VARCHAR(10),
+    FAX                         VARCHAR(50),
+    CORREIO_ELETRONICO          VARCHAR(255),
+    SITUACAO_ESPECIAL           VARCHAR(255),
+    DATA_DA_SITUACAO_ESPECIAL   VARCHAR(50),
+    stg_id                      BIGINT IDENTITY(1,1) PRIMARY KEY
+);
+
+CREATE TABLE stg_Deputados (
+    ideCadastro_API             VARCHAR(50), 
+    nomeCivil                   VARCHAR(255),
+    nomeParlamentar             VARCHAR(255),
+    urlFoto                     VARCHAR(MAX),
+    siglaUF                     CHAR(2),
+    siglaPartido                VARCHAR(10),
+    idLegislatura               VARCHAR(50), 
+    dataInicioAfiliacao         VARCHAR(50), 
+    dataFimAfiliacao            VARCHAR(50), 
+    email                       VARCHAR(100),
+    condicao                    VARCHAR(100),
+    stg_id                      BIGINT IDENTITY(1,1) PRIMARY KEY
+);
