@@ -23,6 +23,8 @@ As seguintes perguntas guiaram a modelagem e a análise dos dados:
 ### ARQUITETURA E COLETA DE DADOS
 Este projeto utiliza um conjunto de dados robusto, com mais de 200.000 registros. A solução foi arquitetada em um esquema em estrela (star schema) para otimizar as consultas analíticas.
 
+Backup: [**GOOGLE DRIVE**](https://drive.google.com/drive/folders/10Nm8lIacvATQ64MKZaj2b1Z3pU6L-B6v?usp=drive_link)
+
 #### Fontes e Processo de Coleta
 A coleta de dados foi um processo manual e cuidadoso, garantindo a integração de informações de diferentes origens para uma análise completa. As principais fontes e como os dados foram obtidos são detalhados abaixo:
 - [**Cota Parlamentar - Brasil.io:**](https://brasil.io/dataset/gastos-deputados/cota-parlamentar/) A fonte principal de dados sobre despesas parlamentares. Os dados foram baixados como um arquivo CSV, contendo informações detalhadas sobre cada despesa, como valor, tipo de gasto e o fornecedor.
