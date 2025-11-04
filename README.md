@@ -23,7 +23,7 @@ As seguintes perguntas guiaram a modelagem e a análise dos dados:
 ### ARQUITETURA E COLETA DE DADOS
 Este projeto utiliza um conjunto de dados robusto, com mais de 200.000 registros. A solução foi arquitetada em um esquema em estrela (star schema) para otimizar as consultas analíticas.
 
-Backup: [**GOOGLE DRIVE**](https://drive.google.com/drive/folders/10Nm8lIacvATQ64MKZaj2b1Z3pU6L-B6v?usp=drive_link)
+Backup: [**GOOGLE DRIVE**](https://drive.google.com/drive/folders/1bYgCf3rgoq-W2OIE1EEgS0Y0G5cn-WR1?usp=sharing)
 
 #### Fontes e Processo de Coleta
 A coleta de dados foi um processo manual e cuidadoso, garantindo a integração de informações de diferentes origens para uma análise completa. As principais fontes e como os dados foram obtidos são detalhados abaixo:
