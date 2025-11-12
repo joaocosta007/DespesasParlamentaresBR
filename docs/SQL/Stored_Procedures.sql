@@ -23,50 +23,7 @@ BEGIN
         
         IF @@ROWCOUNT = 0
         BEGIN
-            RAISERROR('Candidato n„o encontrado com o SQ_CANDIDATO informado.', 16, 1);
-        END
-        
-        COMMIT TRANSACTION;
-        PRINT 'Candidato atualizado com sucesso!';
-    END TRY
-    BEGIN CATCH
-        IF @@TRANCOUNT > 0
-            ROLLBACK TRANSACTION;
-        
-        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
-        RAISERROR('Erro ao atualizar candidato: %s', 16, 1, @ErrorMessage);
-    END CATCH
-END;
-GO
-PRINT 'Stored Procedure 1 criada: sp_Atualizar_Candidato';
-GO
-
-PRINT 'Criando Stored Procedure 1: sp_Atualizar_Candidato...';
-GO
-CREATE OR ALTER PROCEDURE sp_Atualizar_Candidato
-    @SQ_CANDIDATO BIGINT,
-    @NM_CANDIDATO NVARCHAR(200) = NULL,
-    @DS_GENERO NVARCHAR(20) = NULL,
-    @DS_COR_RACA NVARCHAR(50) = NULL,
-    @DS_GRAU_INSTRUCAO NVARCHAR(100) = NULL
-AS
-BEGIN
-    SET NOCOUNT ON;
-    
-    BEGIN TRY
-        BEGIN TRANSACTION;
-        
-        UPDATE Dim_Candidato 
-        SET 
-            NM_CANDIDATO = ISNULL(@NM_CANDIDATO, NM_CANDIDATO),
-            DS_GENERO = ISNULL(@DS_GENERO, DS_GENERO),
-            DS_COR_RACA = ISNULL(@DS_COR_RACA, DS_COR_RACA),
-            DS_GRAU_INSTRUCAO = ISNULL(@DS_GRAU_INSTRUCAO, DS_GRAU_INSTRUCAO)
-        WHERE SQ_CANDIDATO = @SQ_CANDIDATO;
-        
-        IF @@ROWCOUNT = 0
-        BEGIN
-            RAISERROR('Candidato n„o encontrado com o SQ_CANDIDATO informado.', 16, 1);
+            RAISERROR('Candidato n√£o encontrado com o SQ_CANDIDATO informado.', 16, 1);
         END
         
         COMMIT TRANSACTION;
@@ -112,7 +69,7 @@ BEGIN
         
         IF @Candidato_ID IS NULL
         BEGIN
-            RAISERROR('Candidato n„o encontrado com o SQ_CANDIDATO informado.', 16, 1);
+            RAISERROR('Candidato n√£o encontrado com o SQ_CANDIDATO informado.', 16, 1);
         END
         
         -- Buscar ou criar Doador (apenas se CPF/CNPJ for fornecido)
@@ -125,7 +82,7 @@ BEGIN
             IF @Doador_ID IS NULL
             BEGIN
                 INSERT INTO Dim_Doador (NR_CPF_CNPJ_DOADOR, NM_DOADOR, DS_TIPO_DOADOR)
-                VALUES (@NR_CPF_CNPJ_DOADOR, ISNULL(@NM_DOADOR, 'N„o Informado'), 'Pessoa FÌsica/JurÌdica');
+                VALUES (@NR_CPF_CNPJ_DOADOR, ISNULL(@NM_DOADOR, 'N√£o Informado'), 'Pessoa F√≠sica/Jur√≠dica');
                 
                 SET @Doador_ID = SCOPE_IDENTITY();
             END
@@ -179,11 +136,11 @@ BEGIN
         
         IF @@ROWCOUNT = 0
         BEGIN
-            RAISERROR('Despesa n„o encontrada com o ID informado.', 16, 1);
+            RAISERROR('Despesa n√£o encontrada com o ID informado.', 16, 1);
         END
         
         COMMIT TRANSACTION;
-        PRINT 'Despesa excluÌda com sucesso!';
+        PRINT 'Despesa exclu√≠da com sucesso!';
     END TRY
     BEGIN CATCH
         IF @@TRANCOUNT > 0
@@ -207,7 +164,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
     
-    -- Usar a tabela materializada (super r·pida)
+    -- Usar a tabela materializada (super r√°pida)
     SELECT TOP (@TopN)
         SG_PARTIDO,
         NM_PARTIDO,
@@ -221,7 +178,7 @@ BEGIN
     FROM vw_Eficiencia_Partidaria
     WHERE (@Cargo IS NULL OR DS_CARGO = @Cargo)
       AND (@UF IS NULL OR SG_UF = @UF)
-      AND Total_Candidatos > 0  -- Filtro para evitar divis„o por zero
+      AND Total_Candidatos > 0  -- Filtro para evitar divis√£o por zero
     ORDER BY Taxa_Sucesso DESC;
 END;
 GO
@@ -257,7 +214,7 @@ BEGIN
             WHEN Total_Votos_Nominais = 0 THEN 'N/A'
             WHEN (Receita_Media_Por_Candidato * Total_Candidatos) / Total_Votos_NominaIS < 10 THEN 'Muito Baixo'
             WHEN (Receita_Media_Por_Candidato * Total_Candidatos) / Total_Votos_NominaIS < 50 THEN 'Baixo'
-            WHEN (Receita_Media_Por_Candidato * Total_Candidatos) / Total_Votos_NominaIS < 100 THEN 'MÈdio'
+            WHEN (Receita_Media_Por_Candidato * Total_Candidatos) / Total_Votos_NominaIS < 100 THEN 'M√©dio'
             WHEN (Receita_Media_Por_Candidato * Total_Candidatos) / Total_Votos_NominaIS < 200 THEN 'Alto'
             ELSE 'Muito Alto'
         END as Classificacao_Custo
@@ -270,4 +227,5 @@ END;
 GO
 PRINT 'Stored Procedure 5criada: sp_Custo_Por_Voto';
 GO
+
 
