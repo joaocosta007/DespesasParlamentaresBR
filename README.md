@@ -1,5 +1,5 @@
  # [**BACKUP <- CLIQUE AQUI**](https://drive.google.com/file/d/1FtKeq2PcvFYq1RvIJfTwpL3ouF4ARk5o/view?usp=sharing)
-
+#[POWER BI](https://drive.google.com/drive/folders/1QBW0c7N6BobvXvFN52fycvkYf2-JrYpw?usp=drive_link)
 # 🇧🇷 Análise Eleitoral Brasileira — SQL Server
 
 > **Projeto Acadêmico • Data Warehouse • SQL Server**  
@@ -144,9 +144,7 @@ Consulte a **documentação técnica** para entender a estrutura completa do pro
 
 ## 📎 Backup e Repositório
 
- **Backup:** [Google Drive](https://drive.google.com/drive/folders/1bYgCf3rgoq-W2OIE1EEgS0Y0G5cn-WR1?usp=sharing)  
- **Código e Scripts:** [GitHub Repository](#)
- **PowerBI:** [https://drive.google.com/drive/folders/1QBW0c7N6BobvXvFN52fycvkYf2-JrYpw?usp=drive_link]
+**Backup:** [Google Drive](https://drive.google.com/drive/folders/1bYgCf3rgoq-W2OIE1EEgS0Y0G5cn-WR1?usp=sharing)
 
 ---
 
