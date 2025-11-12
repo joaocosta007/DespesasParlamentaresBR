@@ -146,6 +146,7 @@ Consulte a **documentação técnica** para entender a estrutura completa do pro
 
  **Backup:** [Google Drive](https://drive.google.com/drive/folders/1bYgCf3rgoq-W2OIE1EEgS0Y0G5cn-WR1?usp=sharing)  
  **Código e Scripts:** [GitHub Repository](#)
+ **PowerBI:** [https://drive.google.com/drive/folders/1QBW0c7N6BobvXvFN52fycvkYf2-JrYpw?usp=drive_link]
 
 ---
 
